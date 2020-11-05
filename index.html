@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floppy App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo/favicon.png">
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+</header>
+<div class="content">
+    <div class="content-box" data-content="home" id="home">
+        <div class="text-box">
+            <h2><span>Floppy App</span><br>Web Making</h2>
+            <p>
+                Development and support of modern web applications.<br>
+                We develop easy-to-use programs,<br>
+                stylish and responsive websites for all devices.<br>
+                Using modern creation technologies,<br>
+                we produce high-performance web applications in the shortest possible time.
+            </p>
+            <div class="buttons">
+                <a class="click" data-content="about">click to next
+                    <div class="arrow-right"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content-box" data-content="about" id="about">
+        <div class="text-box">
+            <h2>
+                <span>About Us</span><br>
+                Some text
+            </h2>
+            <p>
+                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                born and I
+                will give you a complete account of the system, and expound the actual teachings of the great
+                explorer of
+                the truth, the master-builder of human happiness.
+                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                born and I
+                will give you a complete account of the system, and expound the actual teachings of the great
+                explorer of
+                the truth, the master-builder of human happiness.
+            </p>
+            <div class="buttons">
+                <a class="click" data-content="home">
+                    <div class="arrow-left"></div>
+                    click to back</a>
+                <a class="click" data-content="service">click to next
+                    <div class="arrow-right"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content-box" data-content="service" id="service">
+        <div class="text-box">
+            <h2>
+                <span>Services</span><br>
+                Some text
+            </h2>
+            <div class="service-container">
+                <div class="service-box">
+                    <img src="service_logo/icon1.png">
+                    <p>Design</p>
+                </div>
+                <div class="service-box">
+                    <img src="service_logo/icon2.png">
+                    <p>Custom Web Software</p>
+                </div>
+                <div class="service-box">
+                    <img src="service_logo/icon3.png">
+                    <p>Websites</p>
+                </div>
+            </div>
+            <p>
+                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                born and I
+                will give you a complete account of the system, and expound the actual teachings of the great
+                explorer of
+                the truth, the master-builder of human happiness.
+                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                born and I
+                will give you a complete account of the system, and expound the actual teachings of the great
+                explorer of
+                the truth, the master-builder of human happiness.
+            </p>
+            <div class="buttons">
+                <a class="click" data-content="about">
+                    <div class="arrow-left"></div>
+                    click to back</a>
+                <a class="click" data-content="contact">click to next
+                    <div class="arrow-right"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content-box contact" data-content="contact" id="contact">
+        <div class="text-box">
+            <h2>
+                <span>Contact</span><br>
+                Some text
+            </h2>
+            <p>
+                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                born and I
+            </p>
+            <div class="form">
+                <div class="input-box">
+                    <input type="text" name="" placeholder="Full Name">
+                </div>
+                <div class="input-box">
+                    <input type="text" name="" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="text" name="" placeholder="Mobile No.">
+                </div>
+                <div class="input-box">
+                    <textarea placeholder="Write your message here"></textarea>
+                </div>
+                <div class="input-box">
+                    <input type="submit" name="" value="Send">
+                </div>
+            </div>
+            <div class="buttons">
+                <a class="click" data-content="service">
+                    <div class="arrow-left"></div>
+                    click to back</a>
+            </div>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div>
+            <div class="contact-container">
+                <div class="contact-logo">
+                    <img src="contact_logo/telegram.png">
+                </div>
+                <div class="contact-text">
+                    <p>@floppyapp</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="contact-container">
+                <div class="contact-logo">
+                    <img src="contact_logo/email.png">
+                </div>
+                <div class="contact-text">
+                    <p>floppyapp@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="contact-container">
+                <div class="contact-logo">
+                    <img src="contact_logo/phone.png">
+                </div>
+                <div class="contact-text">
+                    <p>+38099876543</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="all-right-reserved">©All rights reserved</div>
+</div>
+<div class="burger-menu">
+    <a href="#" class="burger-menu-button">
+        <span class="burger-menu-line burger-menu-line-1"></span>
+        <span class="burger-menu-line burger-menu-line-2"></span>
+        <span class="burger-menu-line burger-menu-line-3"></span>
+    </a>
+    <nav class="burger-menu-nav">
+        <a href="#home" data-content="home" class="burger-menu-link">Home</a>
+        <a href="#about" data-content="about" class="burger-menu-link">About Us</a>
+        <a href="#service" data-content="service" class="burger-menu-link">Services</a>
+        <a href="#contact" data-content="contact" class="burger-menu-link">Contact</a>
+    </nav>
+    <div class="burger-menu-overlay"></div>
+</div>
+<div class="right-side">
+    <img data-content="contact" src="image/contact.jpg">
+    <img data-content="home" src="image/home.jpg">
+    <img data-content="about" src="image/about.jpg">
+    <img data-content="service" src="image/service.jpg">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
