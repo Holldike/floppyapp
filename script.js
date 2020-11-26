@@ -32,6 +32,16 @@ $(document).ready(function () {
 
     }
 
+    $('.click').on('click', function () {
+        replaceContent($(this).data('content'));
+
+    });
+
+    $('.logo').on('click', function () {
+        replaceContent($(this).data('content'));
+
+    });
+
     function replaceContent(content) {
         let contents = $('.content .content-box');
         let images = $('.right-side').find('img');
@@ -53,11 +63,6 @@ $(document).ready(function () {
         }
 
     }
-
-    $('.click').on('click', function () {
-        replaceContent($(this).data('content'));
-
-    });
 
     burgerMenu('.burger-menu');
     replaceContent('home');
