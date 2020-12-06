@@ -57,11 +57,14 @@ $(document).ready(function () {
 
         function showNecessaryImage(elements) {
             elements.each(function () {
+
+
                 if ($(this).data('content') !== content) {
-                    // $(this).css('top', '50%');
-                    $(this).css('top', '100%');
+                    $(this).css('transform', 'rotate3d(1, 1, 1, -100deg)');
+                    $(this).css('top', '150%');
 
                 } else {
+                    $(this).css('transform', 'rotate3d(1, 1, 1, 0deg)');
                     $(this).css('top', '0%');
 
                 }
