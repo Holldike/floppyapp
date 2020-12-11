@@ -63,7 +63,7 @@ $(document).ready(function () {
                     $(this).css('top', '100%');
 
                 } else {
-                    $(this).css('transform', 'rotate3d(1, 1, 1, 20deg)');
+                    $(this).css('transform', 'rotate3d(1, 1, 1, 10deg)');
                     $(this).css('top', '0%');
 
                 }
