@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(document).ready(function () {
     function burgerMenu(selector) {
         let menu = $(selector);
@@ -57,7 +59,6 @@ $(document).ready(function () {
 
         function showNecessaryImage(elements) {
             elements.each(function () {
-
                 if ($(this).data('content') !== content) {
                     $(this).css('transform', 'rotate3d(1, 1, 1, -100deg)');
                     $(this).css('top', '100%');
