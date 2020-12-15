@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
+    context: path.resolve(__dirname, 'src'),
     entry: [
-        './src/index.js',
+        '/index.js',
     ],
     output: {
         filename: 'bundle.js',
@@ -14,20 +15,23 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
+                test: /\.sass$/,
+                use: [
+                    'style-loader',
+                    "css-loader",
+                    "sass-loader"
+                ],
+            },
+            {
+                test: /\.(png|jpeg|jpg|gif|svg)$/,
+                use: ['file-loader']
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html'),
-            filename: 'index.html',
+            template: 'index.html',
         }),
         new CleanWebpackPlugin(),
-        new ExtractTextPlugin('style.css')
     ],
 };
