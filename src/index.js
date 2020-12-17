@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import './sass/style.sass';
+import './form';
 
 $(document).ready(function () {
     function burgerMenu(selector) {
