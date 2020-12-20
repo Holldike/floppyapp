@@ -184,6 +184,9 @@ hr {
       border-radius: 100px;
       background: #7dace4;
       color: #000000; }
+    .contact .form .input-box .error {
+      color: #cc1313;
+      font-size: 13px; }
 
 .contact-info {
   border-top: 2px solid #000000;
