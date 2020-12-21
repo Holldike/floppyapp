@@ -120,6 +120,7 @@ hr {
 
 .click {
   text-transform: uppercase;
+  text-decoration: none;
   display: inline-block;
   background: #7dace4;
   letter-spacing: 1px;

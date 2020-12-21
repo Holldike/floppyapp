@@ -77,17 +77,12 @@ $(document).ready(function () {
 
     $('.click').on('click', function () {
         replaceContent($(this).data('content'));
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("#" + $(this).data('content')).offset().top
-        });
 
     });
 
     $('.logo').on('click', function () {
         replaceContent($(this).data('content'));
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("#" + $(this).data('content')).offset().top
-        });
+
     });
 
     $('header > .items > div').on('click', function () {
