@@ -93,4 +93,7 @@ $(document).ready(function () {
     burgerMenu('.burger-menu');
     replaceContent('home');
 
+    $('a').on('click', function(e) {
+        e.preventDefault();
+    })
 })
