@@ -244,6 +244,50 @@ hr
     justify-content: center
     align-items: center
 
+.form-success-message
+
+  .form-success-message-overlay
+    transition: visibility 0s, opacity 0.2s
+    display: flex
+    visibility: hidden
+    opacity: 0
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background: rgb(0 0 0 / 83%)
+    z-index: 1
+
+    .form-success-message-popover
+      padding: 50px
+
+      .text
+        color: white
+        text-align: center
+        margin-bottom: 10px
+        
+      .button
+        margin: auto
+        width: 25%
+        background: white
+        text-align: center
+        text-transform: uppercase
+        background: #7dace4
+        letter-spacing: 1px
+        padding: 8px 15px
+        font-weight: 600
+        cursor: pointer
+        border-radius: 100px
+
+.form-success-message-active
+
+  .form-success-message-overlay
+    visibility: visible
+    opacity: 1
+
 .all-right-reserved
   color: #fff
   text-align: center

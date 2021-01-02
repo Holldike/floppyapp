@@ -5,6 +5,14 @@ class Input {
         this.$el = selector;
     }
 
+    getVal() {
+        return this.$el.val();
+    }
+
+    clearVal() {
+        this.$el.val('');
+    }
+
     showError() {
         this.$el.after('<div class="error">' + this.error + '</div>');
     }
@@ -115,10 +123,36 @@ $(document).ready(function () {
         if (valid) {
             if ($(this).next().hasClass('error')) {
                 $(this).next().remove();
+                
             }
 
-            alert('Submit');
+            $.ajax({
+                url: "https://api.floppyapp.com/form/send",
+                data: {
+                    fullName: fullName.getVal(),
+                    email: email.getVal(),
+                    phone: phone.getVal(),
+                    text: text.getVal(),
+                },
+                method: 'POST'
+              }).done(function() {
+               
+              });
 
+              $('.form-success-message').addClass('form-success-message-active');
+              $('body').css('overflow', 'hidden');
+
+              $('.form-success-message .button').on('click', function() {
+                  $('.form-success-message').removeClass('form-success-message-active');
+                  $('body').css('overflow', 'visible');
+
+              });
+
+              fullName.clearVal();
+              email.clearVal();
+              phone.clearVal();
+              text.clearVal();
+              
         } else {
             if (!$(this).next().hasClass('error')) {
                 $(this).after('<div class="error">Please check the form</div>');
