@@ -45,6 +45,8 @@ $(document).ready(function () {
         showNecessaryText(contents);
         showNecessaryImage(images);
 
+        window.scrollTo(0, 0);
+
         function showNecessaryText(elements) {
             elements.each(function () {
                 if ($(this).data('content') !== content) {
