@@ -123,36 +123,34 @@ $(document).ready(function () {
         if (valid) {
             if ($(this).next().hasClass('error')) {
                 $(this).next().remove();
-                
+
             }
 
             $.ajax({
-                url: "https://api.floppyapp.com/form/send",
+                url: "http://api.floppyapp.com/contact/send",
                 data: {
-                    fullName: fullName.getVal(),
+                    full_name: fullName.getVal(),
                     email: email.getVal(),
                     phone: phone.getVal(),
                     text: text.getVal(),
                 },
                 method: 'POST'
-              }).done(function() {
-               
-              });
+            }).done(function () {
+                $('.form-success-message').addClass('form-success-message-active');
+                $('body').css('overflow', 'hidden');
 
-              $('.form-success-message').addClass('form-success-message-active');
-              $('body').css('overflow', 'hidden');
+                $('.form-success-message .button').on('click', function () {
+                    $('.form-success-message').removeClass('form-success-message-active');
+                    $('body').css('overflow', 'visible');
 
-              $('.form-success-message .button').on('click', function() {
-                  $('.form-success-message').removeClass('form-success-message-active');
-                  $('body').css('overflow', 'visible');
+                });
 
-              });
+                fullName.clearVal();
+                email.clearVal();
+                phone.clearVal();
+                text.clearVal();
+            });
 
-              fullName.clearVal();
-              email.clearVal();
-              phone.clearVal();
-              text.clearVal();
-              
         } else {
             if (!$(this).next().hasClass('error')) {
                 $(this).after('<div class="error">Please check the form</div>');
