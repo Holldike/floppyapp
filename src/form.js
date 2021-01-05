@@ -127,7 +127,7 @@ $(document).ready(function () {
             }
 
             $.ajax({
-                url: "http://api.floppyapp.com/contact/send",
+                url: "https://api.floppyapp.com/contact/send",
                 data: {
                     full_name: fullName.getVal(),
                     email: email.getVal(),
