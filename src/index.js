@@ -96,6 +96,12 @@ $(document).ready(function () {
     replaceContent('home');
 
     //Chatra
+    window.ChatraSetup = {
+        colors: {
+            buttonBg: '#8971d0'
+        }
+    };
+
     (function(d, w, c) {
         w.ChatraID = '8p86MwG7sfQzvrnai';
         var s = d.createElement('script');
