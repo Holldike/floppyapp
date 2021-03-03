@@ -95,22 +95,4 @@ $(document).ready(function () {
     burgerMenu('.burger-menu');
     replaceContent('home');
 
-    //Chatra
-    window.ChatraSetup = {
-        colors: {
-            buttonBg: '#8971d0'
-        }
-    };
-
-    (function(d, w, c) {
-        w.ChatraID = '8p86MwG7sfQzvrnai';
-        var s = d.createElement('script');
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        s.async = true;
-        s.src = 'https://call.chatra.io/chatra.js';
-        if (d.head) d.head.appendChild(s);
-    })(document, window, 'Chatra');
-    //Chatra
 })
