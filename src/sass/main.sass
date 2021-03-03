@@ -140,6 +140,7 @@ hr
   text-decoration: none
   display: inline-block
   background: #7dace4
+  border: 1px solid #7dace4
   letter-spacing: 1px
   padding: 8px 15px
   margin-top: 20px
@@ -148,6 +149,7 @@ hr
   cursor: pointer
   color: #000000
   border-radius: 100px
+  transition: 0.5s
 
   =arrow($url)
     background: $url
@@ -165,6 +167,9 @@ hr
   .arrow-right
     +arrow(url(../image/arrow-right.png))
     margin-left: 5px
+
+.click:hover
+  background: #ffffff
 
 .contact
 
@@ -204,11 +209,16 @@ hr
         text-transform: uppercase
         font-weight: 500
         letter-spacing: 1px
-        border-bottom: none
         font-size: 18px
         border-radius: 100px
         background: #7dace4
+        border: 1px solid #7dace4
         color: #000000
+        transition: 0.5s
+        cursor: pointer
+
+      input[type=submit]:hover
+        background: #ffffff
 
       .error
         color: #cc1313
