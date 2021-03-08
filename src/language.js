@@ -1,4 +1,4 @@
-export default {
+let content = {
     en: {
         homeTitle: 'Floppy App',
         homeSubtitle: 'Web Making',
@@ -134,6 +134,15 @@ export default {
 };
 
 export function detectLangCode() {
-    return navigator.language.slice(0, 2);
+    let code = navigator.language.slice(0, 2);
+
+    if (!content.hasOwnProperty(code)) {
+        code = 'en';
+
+    }
+
+    return code;
 
 }
+
+export default content

@@ -77,12 +77,7 @@ $(document).ready(function () {
 
     }
 
-    function insertText(langCode = 'en') {
-        if (!language.hasOwnProperty(langCode)) {
-            return;
-
-        }
-
+    function insertText(langCode) {
         let text = language[langCode];
 
         let textElements = $('text');
