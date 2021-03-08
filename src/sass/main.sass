@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap")
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")
 
 html
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -10,10 +10,11 @@ html::-webkit-scrollbar
   display: none
 
 *
+  line-height: 1.4
   box-sizing: border-box
   padding: 0
   margin: 0
-  font-family: Poppins, sans-serif
+  font-family: 'Montserrat', sans-serif
 
 header
   justify-content: space-between
@@ -133,17 +134,18 @@ hr
     top: 0
 
 .buttons
-  margin: 15px 0
+  margin-top: 30px
+  display: flex
 
 .click
+  display: flex
+  align-items: center
   text-transform: uppercase
   text-decoration: none
-  display: inline-block
   background: #7dace4
   border: 1px solid #7dace4
   letter-spacing: 1px
   padding: 10px 15px
-  margin-top: 20px
   font-weight: 600
   font-size: 14px
   cursor: pointer
@@ -159,7 +161,6 @@ hr
     position: relative
     height: 20px
     width: 20px
-    top: 4px
 
   .arrow-left
     +arrow(url(../image/arrow-left.png))
@@ -303,4 +304,4 @@ hr
   text-align: center
   background: #305579
   width: 100%
-  padding: 2px
+  padding: 5px
