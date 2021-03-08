@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import './sass/style.sass';
 import language from "./language";
+import {detectLangCode} from "./language";
 import './form';
 
 $(document).ready(function () {
@@ -73,11 +74,6 @@ $(document).ready(function () {
 
     function scrollToToTop() {
         window.scrollTo(0, 0);
-
-    }
-
-    function detectLangCode() {
-        return navigator.language.slice(0, 2);
 
     }
 

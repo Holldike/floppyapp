@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import language from "./language";
+import {detectLangCode} from "./language"
 
 class Input {
     constructor(selector) {
@@ -29,7 +31,7 @@ class Input {
 class FullName extends Input {
     validate() {
         if (!this.$el.val()) {
-            this.error = 'Please enter your name';
+            this.error = language[detectLangCode()].formValidationErrorEmptyFullName;
             return false;
         }
 
@@ -40,13 +42,13 @@ class FullName extends Input {
 class Email extends Input {
     validate() {
         if (!this.$el.val()) {
-            this.error = 'Please enter your email';
+            this.error = language[detectLangCode()].formValidationErrorEmptyEmail;
             return false;
         }
 
         let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!regex.test(this.$el.val())) {
-            this.error = 'Email is not valid';
+            this.error = language[detectLangCode()].formValidationErrorNotValidEmail;
             return false;
         }
 
@@ -59,7 +61,7 @@ class Phone extends Input {
         let regex = /^[0-9]+$/
 
         if (this.$el.val() && !regex.test(this.$el.val())) {
-            this.error = 'Only numerical is allowed';
+            this.error = language[detectLangCode()].formValidationErrorNotValidPhone;
             return false;
 
         }
@@ -71,7 +73,7 @@ class Phone extends Input {
 class Text extends Input {
     validate() {
         if (this.$el.val().length < 10 || !this.$el.val()) {
-            this.error = '10 symbols is minimum';
+            this.error = language[detectLangCode()].formValidationErrorEmptyText;
             return false;
         }
 
@@ -153,7 +155,7 @@ $(document).ready(function () {
 
         } else {
             if (!$(this).next().hasClass('error')) {
-                $(this).after('<div class="error">Please check the form</div>');
+                $(this).after('<div class="error">' + language[detectLangCode()].formValidationError + '</div>');
             }
         }
     })

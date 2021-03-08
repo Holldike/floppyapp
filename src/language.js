@@ -56,6 +56,12 @@ export default {
         clickToNext: 'next',
         clickToBack: 'back',
 
+        formValidationErrorEmptyFullName: 'Please enter your name',
+        formValidationErrorEmptyEmail: 'Please enter your email',
+        formValidationErrorNotValidEmail: 'Email is not valid',
+        formValidationErrorNotValidPhone: 'Only numerical is allowed',
+        formValidationErrorEmptyText: '10 symbols is minimum',
+        formValidationError: 'Please check the form',
         formSuccessMessagePopover: 'We have received your message and will contact you as soon as possible using the specified contacts in the form'
 
     },
@@ -116,7 +122,18 @@ export default {
         clickToNext: 'далее',
         clickToBack: 'назад',
 
+        formValidationErrorEmptyFullName: 'Пожалуйста введите ваше имя',
+        formValidationErrorEmptyEmail: 'Пожалуйста введите ваш email',
+        formValidationErrorNotValidEmail: 'Email не корректный',
+        formValidationErrorNotValidPhone: 'Можно вводить только цифры',
+        formValidationErrorEmptyText: 'Минимум 10 символов',
+        formValidationError: 'Проверте форму',
         formSuccessMessagePopover: 'Мы получили ваше сообщение и свяжемся с вами в ближайшее время по указанным в форме контактам'
 
     }
 };
+
+export function detectLangCode() {
+    return navigator.language.slice(0, 2);
+
+}
