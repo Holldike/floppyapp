@@ -35,11 +35,21 @@
 <header>
     <a class="logo" data-content="home"></a>
     <div class="items">
-        <div data-content="home">Home</div>
-        <div data-content="about">About Us</div>
-        <div data-content="service">Services</div>
-        <div data-content="technology">Technologies</div>
-        <div data-content="contact">Contact</div>
+        <div data-content="home">
+            <text content="headerTitleHome"></text>
+        </div>
+        <div data-content="about">
+            <text content="headerTitleAbout"></text>
+        </div>
+        <div data-content="service">
+            <text content="headerTitleService"></text>
+        </div>
+        <div data-content="technology">
+            <text content="headerTitleTechnology"></text>
+        </div>
+        <div data-content="contact">
+            <text content="headerTitleContact"></text>
+        </div>
     </div>
 </header>
 <hr>
@@ -47,16 +57,15 @@
 <div class="content">
     <div class="content-box" data-content="home" id="home">
         <div class="wrap">
-            <h2><span>Floppy App</span><br>Web Making</h2>
+            <h2><span><text content="homeTitle"></text></span><br>
+                <text content="homeSubtitle"></text>
+            </h2>
             <div class="text-section">
-                Development and support of modern web applications.<br>
-                We develop easy-to-use programs,<br>
-                stylish and responsive websites for all devices.<br>
-                Using modern creation technologies,<br>
-                we produce high-performance web applications in the shortest possible time.
+                <text content="home"></text>
             </div>
             <div class="buttons">
-                <a class="click" data-content="about">click to next
+                <a class="click" data-content="about">
+                    <text content='clickToNext'></text>
                     <div class="arrow-right"></div>
                 </a>
             </div>
@@ -65,23 +74,17 @@
     <div class="content-box" data-content="about" id="about">
         <div class="wrap">
             <h2>
-                <span>About Us</span><br>
-                We are
+                <span><text content="aboutTitle"></text></span><br>
+                <text content="aboutSubtitle"></text>
             </h2>
             <div class="text-section">
-                <b>Ukrainian company specializing in the development of web products</b><br><br>
-                By harmoniously combining design and development, we turn complex tasks into<br>
-                simple and understandable solutions, helping you grow your business and interact more effectively with
-                your customers<br><br>
-                Using modern management methods and advanced tools to optimize performance <br>
-                we create products and services based on your needs,<br>
-                combining reality and the digital world into a single unique customer experience
+                <text content="about"></text>
             </div>
             <div class="buttons">
                 <a class="click" data-content="home">
                     <div class="arrow-left"></div>
-                    click to back</a>
-                <a class="click" data-content="service">click to next
+                    <text content='clickToBack'></text></a>
+                <a class="click" data-content="service"><text content='clickToNext'></text>
                     <div class="arrow-right"></div>
                 </a>
             </div>
@@ -90,8 +93,8 @@
     <div class="content-box" data-content="service" id="service">
         <div class="wrap">
             <h2 style="text-align: center">
-                <span>Services</span><br>
-                We Do
+                <span><text content="serviceTitle"></text></span><br>
+                <text content="serviceSubtitle"></text>
             </h2>
             <div class="service-container">
                 <div class="service-box">
@@ -108,41 +111,13 @@
                 </div>
             </div>
             <div class="text-section" style="text-align: center">
-                <b>We provide a full cycle of development, launch and promotion of sites of all types</b><br><br>
-
-                <b>- Business card sites and landing pages -</b> electronic platforms for launching a new business,<br>
-                informing the market about the emergence of new products and services,<br>
-                attracting attention to young companies<br><br>
-
-                <b>- Corporate websites -</b> are a multifunctional image platform for medium and large businesses,<br>
-                which implies the formation of positive brand perception among consumers<br><br>
-
-                <b>- News portals -</b> commercial industry and general news resources of general purpose<br><br>
-
-                <b>- Online stores -</b> trading and advertising platforms for online business <br>
-                and promotion of goods and services in the network with a full cycle of client services<br>
-                (ordering, payment, delivery, advertising, informing about discounts, promotions, etc.)<br><br>
-
-                <b>Turnkey Website<br>
-                Website development for our company is</b><br><br>
-                <b>-</b> Creation and development of a unique design of an electronic platform (taking into account
-                the<br>
-                corporate style, colors and placement of functional elements)<br><br>
-                <b>-</b> Usability development (navigation, management, content placement and updating,
-                etc.)<br><br>
-                <b>-</b> Creation of custom templates and layout of site pages, taking into account the number of
-                functional<br>
-                pages and the selected CMS<br><br>
-                <b>-</b> Installation and configuration of a working CMS, transfer of the site template to the
-                "engine"<br><br>
-                <b>-</b> Test launch of the site on the domain with the elimination of the detected errors<br><br>
-                <b>-</b> Launching an electronic resource into operation<br>
+                <text content="service"></text>
             </div>
             <div class="buttons" style="display: flex; justify-content: space-around">
                 <a class="click" data-content="about">
                     <div class="arrow-left"></div>
-                    click to back</a>
-                <a class="click" data-content="technology">click to next
+                    <text content='clickToBack'></text></a>
+                <a class="click" data-content="technology"><text content='clickToNext'></text>
                     <div class="arrow-right"></div>
                 </a>
             </div>
@@ -151,8 +126,8 @@
     <div class="content-box" data-content="technology" id="technology">
         <div class="wrap">
             <h2 style="text-align: center">
-                <span>Technology</span><br>
-                We Use
+                <span><text content="technologyTitle"></text></span><br>
+                <text content="technologySubtitle"></text>
             </h2>
             <div class="technology">
                 <div>
@@ -199,10 +174,10 @@
             <div class="buttons" style="display: flex; justify-content: space-around">
                 <a class="click" data-content="service">
                     <div class="arrow-left"></div>
-                    click to back</a>
+                    <text content='clickToBack'></text></a>
 
                 <a class="click" data-content="contact">
-                    click to next
+                    <text content='clickToNext'></text>
                     <div class="arrow-right"></div>
                 </a>
 
@@ -212,25 +187,27 @@
     <div class="content-box contact" data-content="contact" id="contact">
         <div class="wrap">
             <h2>
-                <span>Contact</span><br>
-                Ask Us
+                <span><text content="contactTitle"></text></span><br>
+                <text content="contactSubtitle"></text>
             </h2>
             <div class="text-section">
-                We operate in an industry built on trust. This can only be achieved through communication and experienced support<br>
-                If you have a questions can ask them us in this form or through contact data from bellow panel
-
+                <text content="contact"></text>
                 <div class="form">
                     <div class="input-box">
-                        <input type="text" name="name" placeholder="Full Name">
+                        <text content="contactFormInputFullName"></text>
+                        <input type="text" name="name">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="email" placeholder="Email Address">
+                        <text content="contactFormInputEmail"></text>
+                        <input type="text" name="email">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="phone" placeholder="Mobile No.">
+                        <text content="contactFormInputPhone"></text>
+                        <input type="text" name="phone">
                     </div>
                     <div class="input-box">
-                        <textarea name="text" placeholder="Write your message here"></textarea>
+                        <text content="contactFormInputText"></text>
+                        <textarea name="text"></textarea>
                     </div>
                     <div class="input-box">
                         <input type="submit" value="Send">
@@ -240,7 +217,7 @@
             <div class="buttons">
                 <a class="click" data-content="technology">
                     <div class="arrow-left"></div>
-                    click to back</a>
+                    <text content='clickToBack'></text></a>
             </div>
         </div>
     </div>
@@ -280,7 +257,11 @@
             </div>
         </div>
     </div>
-    <div class="all-right-reserved">©2021 All rights reserved</div>
+    <div class="all-right-reserved">
+        <text content="allRightReserved"></text>
+    </div>
+    <text></text>
+    <text></text>
 </div>
 <div class="burger-menu">
     <a class="burger-menu-button">
@@ -289,11 +270,11 @@
         <span class="burger-menu-line burger-menu-line-3"></span>
     </a>
     <nav class="burger-menu-nav">
-        <a data-content="home" class="burger-menu-link">Home</a>
-        <a data-content="about" class="burger-menu-link">About Us</a>
-        <a data-content="service" class="burger-menu-link">Services</a>
-        <a data-content="technology" class="burger-menu-link">Technology</a>
-        <a data-content="contact" class="burger-menu-link">Contact</a>
+        <a data-content="home" class="burger-menu-link"><text content="burgerTitleHome"></text></a>
+        <a data-content="about" class="burger-menu-link"><text content="burgerTitleAbout"></text></a>
+        <a data-content="service" class="burger-menu-link"><text content="burgerTitleService"></text></a>
+        <a data-content="technology" class="burger-menu-link"><text content="burgerTitleTechnology"></text></a>
+        <a data-content="contact" class="burger-menu-link"><text content="burgerTitleContact"></text></a>
     </nav>
     <div class="burger-menu-overlay"></div>
 </div>
@@ -301,7 +282,7 @@
     <div class="form-success-message-overlay">
         <div class="form-success-message-popover">
             <div class="text">
-                We have received your message and will contact you as soon as possible using the specified contacts in the form
+                <text content="formSuccessMessagePopover"></text>
             </div>
             <div class="button">OK</div>
         </div>

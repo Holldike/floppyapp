@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import './sass/style.sass';
+import language from "./language";
 import './form';
 
 $(document).ready(function () {
@@ -17,7 +18,7 @@ $(document).ready(function () {
 
         links.on('click', function () {
             toggleMenu();
-            replaceContent($(this).data('content'));
+            replaceAll($(this).data('content'));
 
         });
 
@@ -38,61 +39,94 @@ $(document).ready(function () {
 
     }
 
+    function replaceBackgroundImage(image) {
+        let backgroundImages = $('.right-side').find('img');
+
+        backgroundImages.each(function () {
+            if ($(this).data('content') !== image) {
+                $(this).css('top', '100%');
+
+            } else {
+                $(this).css('top', '0%');
+
+            }
+
+        });
+
+    }
+
     function replaceContent(content) {
         let contents = $('.content .content-box');
-        let images = $('.right-side').find('img');
 
-        showNecessaryText(contents);
-        showNecessaryImage(images);
+        contents.each(function () {
+            if ($(this).data('content') !== content) {
+                $(this).css('display', 'none');
 
+            } else {
+                $(this).fadeIn('slow');
+
+            }
+
+        });
+
+    }
+
+    function scrollToToTop() {
         window.scrollTo(0, 0);
 
-        function showNecessaryText(elements) {
-            elements.each(function () {
-                if ($(this).data('content') !== content) {
-                    $(this).css('display', 'none');
+    }
 
-                } else {
-                    $(this).fadeIn('slow');
+    function detectLangCode() {
+        return navigator.language.slice(0, 2);
 
-                }
+    }
 
-            });
-
-        }
-
-        function showNecessaryImage(elements) {
-            elements.each(function () {
-                if ($(this).data('content') !== content) {
-                    $(this).css('top', '100%');
-
-                } else {
-                    $(this).css('top', '0%');
-
-                }
-
-            });
+    function insertText(langCode = 'en') {
+        if (!language.hasOwnProperty(langCode)) {
+            return;
 
         }
+
+        let text = language[langCode];
+
+        let textElements = $('text');
+
+        textElements.each(function () {
+            let textContent = $(this).attr('content');
+
+            if (!textContent || !text.hasOwnProperty(textContent)) return;
+
+            $(this).append(text[textContent]);
+
+        });
+
+    }
+
+    function replaceAll(to) {
+        replaceBackgroundImage(to);
+        replaceContent(to);
+        scrollToToTop();
 
     }
 
     $('.click').on('click', function () {
-        replaceContent($(this).data('content'));
+        replaceAll($(this).data('content'));
 
     });
 
     $('.logo').on('click', function () {
-        replaceContent($(this).data('content'));
+        replaceAll($(this).data('content'));
 
     });
 
     $('header > .items > div').on('click', function () {
-        replaceContent($(this).data('content'));
+        replaceAll($(this).data('content'));
 
     });
 
     burgerMenu('.burger-menu');
+    replaceBackgroundImage('home');
     replaceContent('home');
+    insertText();
 
 })
