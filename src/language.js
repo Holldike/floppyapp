@@ -53,8 +53,8 @@ export default {
         contactFormInputPhone: 'Mobile No. (optional)',
         contactFormInputText: 'Write your message here',
 
-        clickToNext: 'click to next',
-        clickToBack: 'click to next',
+        clickToNext: 'next',
+        clickToBack: 'back',
 
         formSuccessMessagePopover: 'We have received your message and will contact you as soon as possible using the specified contacts in the form'
 

@@ -127,6 +127,6 @@ $(document).ready(function () {
     burgerMenu('.burger-menu');
     replaceBackgroundImage('home');
     replaceContent('home');
-    insertText();
+    insertText(detectLangCode());
 
 })
